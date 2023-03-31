@@ -10,6 +10,8 @@
     </parent>
 
     <artifactId>mainservice</artifactId>
+    <groupId>io.github.yeshamavani</groupId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -24,6 +26,10 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <service.name>mainservice</service.name>
+        <version.phase>${version.update.enable}</version.phase>
+        <service.version>${mainservice.version}</service.version>
     </properties>
 
 </project>
