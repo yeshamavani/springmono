@@ -10,8 +10,8 @@
 <!--	</parent>-->
 
 	<groupId>io.github.yeshamavani</groupId>
-	<artifactId>springmono</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>springmono</artifactId>
 	<packaging>pom</packaging>
 
 	<name>springmono</name>
