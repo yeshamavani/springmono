@@ -64,7 +64,6 @@
 		<connection>scm:git:git://github.com/yeshamavani/springmono.git</connection>
 		<developerConnection>scm:git:ssh://github.com:yeshamavani/springmono.git</developerConnection>
 		<url>http://github.com/yeshamavani/springmono/tree/master</url>
-	  <tag>v${releaseVersion}</tag>
   </scm>
 
 	<dependencies>
@@ -149,16 +148,23 @@
 					<!-- releaseProfiles configuration will actually force a Maven profile
 						– the `releases` profile – to become active during the Release process. -->
 					<releaseProfiles>releases</releaseProfiles>
-					<localCheckout>true</localCheckout>
-					<pushChanges>false</pushChanges>
+<!--					<localCheckout>true</localCheckout>-->
+<!--					<pushChanges>false</pushChanges>-->
+
 				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-scm-plugin</artifactId>
-						<version>1.8.1</version>
+						<version>2.0.0</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>2.0.0</version>
+
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
