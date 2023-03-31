@@ -62,7 +62,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/yeshamavani/springmono.git</connection>
-		<developerConnection>scm:git:ssh://github.com:yeshamavani/springmono.git</developerConnection>
+		<developerConnection>scm:git:ssh://github.com/yeshamavani/springmono.git</developerConnection>
 		<url>http://github.com/yeshamavani/springmono/tree/master</url>
   </scm>
 
