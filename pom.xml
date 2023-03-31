@@ -167,7 +167,7 @@
 				<artifactId>multi-module-maven-release-plugin</artifactId>
 				<version>3.6.4</version>
 				<configuration>
-<!--					<serverId>github.com</serverId>-->
+					<serverId>github.com</serverId>
 					<knownHosts>~/.ssh/known_hosts</knownHosts>
 					<releaseGoals>
 						<releaseGoal>deploy</releaseGoal>
