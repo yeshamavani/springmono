@@ -136,30 +136,43 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<!--suppress UnresolvedMavenProperty -->
-					<tag>v${releaseVersion}</tag>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<!-- releaseProfiles configuration will actually force a Maven profile
-						– the `releases` profile – to become active during the Release process. -->
-					<releaseProfiles>releases</releaseProfiles>
-<!--					<localCheckout>true</localCheckout>-->
-<!--					<pushChanges>false</pushChanges>-->
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-release-plugin</artifactId>-->
+<!--				<version>3.0.0</version>-->
+<!--				<configuration>-->
+<!--					&lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--					<tag>v${releaseVersion}</tag>-->
+<!--					<tagNameFormat>v@{project.version}</tagNameFormat>-->
+<!--					<autoVersionSubmodules>true</autoVersionSubmodules>-->
+<!--					&lt;!&ndash; releaseProfiles configuration will actually force a Maven profile-->
+<!--						– the `releases` profile – to become active during the Release process. &ndash;&gt;-->
+<!--					<releaseProfiles>releases</releaseProfiles>-->
+<!--					<goals>deploy</goals>-->
+<!--&lt;!&ndash;					<localCheckout>true</localCheckout>&ndash;&gt;-->
+<!--&lt;!&ndash;					<pushChanges>false</pushChanges>&ndash;&gt;-->
 
+<!--				</configuration>-->
+<!--				<dependencies>-->
+<!--					<dependency>-->
+<!--						<groupId>org.apache.maven.plugins</groupId>-->
+<!--						<artifactId>maven-scm-plugin</artifactId>-->
+<!--						<version>2.0.0</version>-->
+<!--					</dependency>-->
+<!--				</dependencies>-->
+<!--			</plugin>-->
+
+			<plugin>
+				<groupId>com.github.danielflower.mavenplugins</groupId>
+				<artifactId>multi-module-maven-release-plugin</artifactId>
+				<version>3.6.4</version>
+				<configuration>
+					<releaseGoals>
+						<releaseGoal>deploy</releaseGoal>
+					</releaseGoals>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-scm-plugin</artifactId>
-						<version>2.0.0</version>
-					</dependency>
-				</dependencies>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
